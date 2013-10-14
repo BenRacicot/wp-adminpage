@@ -15,8 +15,8 @@ function shnazy_options() {
 
 	register_setting( 
     	'my-settings-group', // option group
-    	'my-setting' 		 // option name - exists in the DB 
-    	//'sanitize'		 // sanitization callback
+    	'my-setting', 		 // option name - exists in the DB 
+    	'sanitize_callback'	 // sanitization callback function...
     );
     	// add_settings_section( $id, $title, $callback, $page ):
 	    add_settings_section( 
@@ -100,10 +100,9 @@ function my_custom_submenu_page_callback() {
 	echo '<div class="wrap"><div id="icon-tools" class="icon32"></div>';
 		echo '<h2>My Custom Submenu Page</h2>';
 	echo '</div>';
-
 }
 
-
+// function sanitize_callback(){}
 
 
 
