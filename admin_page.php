@@ -1,11 +1,13 @@
 <?php 
 
+// include this file in functions.php
+
 // create the menu tab - http://codex.wordpress.org/Administration_Menus
 add_action('admin_menu', 'shnazy_options');
 function shnazy_options() {
 
   //add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
-	//  If the function parameter is omitted, the menu_slug should be the PHP file that handles the display of the menu page content.
+	// If the function parameter is omitted, the menu_slug should be the PHP file that handles the display of the menu page content.
   add_menu_page("page title", 'Menu Title', 'manage_options','slug_name', 'page_content_func');
 
   //add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
@@ -14,14 +16,14 @@ function shnazy_options() {
 	register_setting( 
     	'my-settings-group', // option group
     	'my-setting' 		 // option name - exists in the DB 
-    	//'sanitize'			 // sanitization callback
+    	//'sanitize'		 // sanitization callback
     );
     	// add_settings_section( $id, $title, $callback, $page ):
 	    add_settings_section( 
 	    	'section-one', 		     // section ID
 	    	'Section One', 			 // section title
 	    	'section_one_callback',  // usually renders some help text
-	    	'slug_name' 			 // the menu slug we used in our add_options_page()
+	    	'slug_name' 			 // the menu slug we used in our add_menu_page()
 	    );	
 	    	
 		    add_settings_field( 
