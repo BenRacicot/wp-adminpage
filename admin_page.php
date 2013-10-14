@@ -6,12 +6,24 @@
 add_action('admin_menu', 'shnazy_options');
 function shnazy_options() {
 
-  //add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 	// If the function parameter is omitted, the menu_slug should be the PHP file that handles the display of the menu page content.
   add_menu_page("page title", 'Menu Title', 'manage_options','slug_name', 'page_content_func');
 
-  //add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
+	// Hide duplicate submenu item
+	add_submenu_page(
+		'slug_name',   		   // parent slug, same as main menu slug
+		'',           		   // empty page title
+		'',        			   // empty menu title
+		'manage_options',      // same capability as parent
+		'slug_name',           // same menu slug as parent slug
+		'page_content_func'    // same function as parent
+	);
+
+  // First submenu page
+  // add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
   add_submenu_page( 'slug_name', 'My Submenu Page Title', 'My Menu Submenu Title', 'manage_options', 'slug_name_sub', 'my_custom_submenu_page_callback' );
+
 
 	register_setting( 
     	'my-settings-group', // option group - for security 'clearance' nonces etc in settings_fields()
