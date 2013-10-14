@@ -22,12 +22,12 @@ and finally the optional yet "c'mon guy's" sanitization callback (these are used
 
 <b>add_action('admin_menu', 'shnazy_options');<b>
 
-	initializes some shnazy options when the admin_menu fires. Some use the admin_init hook instead.
+initializes some shnazy options when the admin_menu fires. Some use the admin_init hook instead.
 
 <b><a href="http://codex.wordpress.org/Function_Reference/add_menu_page" target="_blank">add_menu_page</a>($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );<b>
 
-	The main function to add a top level page tab on the administration menu.
-	Could use add_options_page() as well. If the function parameter is omitted, the menu_slug should be the PHP file that handles the display of the menu page content.
+The main function to add a top level page tab on the administration menu.
+Could use add_options_page() as well. If the function parameter is omitted, the menu_slug should be the PHP file that handles the display of the menu page content.
 
 <b><a href="http://codex.wordpress.org/Function_Reference/add_submenu_page" target="_blank">add_submenu_page</a>($parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function);<b>
 
