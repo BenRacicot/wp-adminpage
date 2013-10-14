@@ -33,7 +33,7 @@ Could use add_options_page() as well. If the function parameter is omitted, the 
 
 Requires the function parameter that handles the display of the menu page content
 
-<b> In order to use the Settings API properly </b>
+<h3> In order to use the Settings API properly </h3>
 
 <b><a href="http://codex.wordpress.org/Function_Reference/register_setting" target="_blank">register_setting</a>( $option_group, $option_name, $sanitize_callback );<b>
 
