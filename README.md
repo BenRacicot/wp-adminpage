@@ -31,7 +31,7 @@ Could use add_options_page() as well. If the function parameter is omitted, the 
 
 <b><a href="http://codex.wordpress.org/Function_Reference/add_submenu_page" target="_blank">add_submenu_page</a>($parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function);<b>
 
-	Requires the function parameter that handles the display of the menu page content
+Requires the function parameter that handles the display of the menu page content
 
 <b> In order to use the Settings API properly </b>
 
