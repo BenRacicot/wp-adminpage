@@ -12,8 +12,8 @@ I whipped up this little file to walk me through the process of creating top lev
 <li>Rename add_menu_page()'s Page Title, Menu Title, Slug Name and function name to your preference. Note: slug_name is used in several places. page_content_func is the page's html output function.</li>
 
 <li>Rename register_setting()'s options group (used within settings_fields()), 
-	the options name (used in settings_fields() & any get_option('my-setting') in the future), 
-	and finally the optional yet "c'mon guy's" sanitization callback (these are used throughout the file and saved to your WP DB!)</li>
+the options name (used in settings_fields() & any get_option('my-setting') in the future), 
+and finally the optional yet "c'mon guy's" sanitization callback (these are used throughout the file and saved to your WP DB!)</li>
 
 <li>include('admin_page.php');</li>
 </ol>
