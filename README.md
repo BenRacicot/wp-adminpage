@@ -7,9 +7,9 @@ I whipped up this little file to walk me through the process of creating top lev
 
 <h2>Steps for use:</h2>
 <ol>
-<li>Read through the comments and make the file farmiliar before customizing. </li>
+<li>Read through the comments and make the file familiar before customizing. </li>
 
-<li>Rename add_menu_page()'s Page Title, Menu Title, Slug Name and function name to your prefrence. Note: slug_name is used in several places. page_content_func is the page's html output function.</li>
+<li>Rename add_menu_page()'s Page Title, Menu Title, Slug Name and function name to your preference. Note: slug_name is used in several places. page_content_func is the page's html output function.</li>
 
 <li>Rename register_setting()'s options group (used within settings_fields()), 
 	the options name (used in settings_fields() & any get_option('my-setting') in the future), 
@@ -24,12 +24,12 @@ I whipped up this little file to walk me through the process of creating top lev
 
 	initializes some shnazy options when the admin_menu fires. Some use the admin_init hook instead.
 
-<b><a href="http://codex.wordpress.org/Function_Reference/add_menu_page" target="_blank">add_menu_page</a>( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );<b>
+<b><a href="http://codex.wordpress.org/Function_Reference/add_menu_page" target="_blank">add_menu_page</a>($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );<b>
 
 	The main function to add a top level page tab on the administration menu.
 	Could use add_options_page() as well. If the function parameter is omitted, the menu_slug should be the PHP file that handles the display of the menu page content.
 
-<b><a href="http://codex.wordpress.org/Function_Reference/add_submenu_page" target="_blank">add_submenu_page</a>( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );<b>
+<b><a href="http://codex.wordpress.org/Function_Reference/add_submenu_page" target="_blank">add_submenu_page</a>($parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function);<b>
 
 	Requires the function parameter that handles the display of the menu page content
 

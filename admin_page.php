@@ -14,7 +14,7 @@ function shnazy_options() {
   add_submenu_page( 'slug_name', 'My Submenu Page Title', 'My Menu Submenu Title', 'manage_options', 'slug_name_sub', 'my_custom_submenu_page_callback' );
 
 	register_setting( 
-    	'my-settings-group', // option group
+    	'my-settings-group', // option group - for security 'clearance' nonces etc in settings_fields()
     	'my-setting', 		 // option name - exists in the DB 
     	'sanitize_callback'	 // sanitization callback function...
     );
@@ -77,7 +77,6 @@ global $options;
 		// add_settings_field Callbacks echoing stored data in 3 ways
 		function field_one_callback(){
 			$options = get_option('my-setting');
-
 			echo "<input id='plugin_textarea_string' name='my-setting[text_box]' type='textarea' value='{$options['text_box']}'>";
 		}
 		// 
@@ -96,7 +95,6 @@ global $options;
 
 // create submenu content
 function my_custom_submenu_page_callback() {
-	
 	echo '<div class="wrap"><div id="icon-tools" class="icon32"></div>';
 		echo '<h2>My Custom Submenu Page</h2>';
 	echo '</div>';
