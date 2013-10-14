@@ -3,20 +3,20 @@ wp-adminpage
 
 A basic 'quick file' to create a standard admin page and sub-menu page. 
 
-I whipped up this little file to walk me through the process of creating top level admin pages and to document the common files needed for such.
+I whipped up this little file to walk me through the process of creating top level admin pages and to document the common functions needed. (they get confusing)
 
-Steps for use:
+<h2>Steps for use:</h2>
+<ol>
+<li>1: Read through the comments and make the file farmiliar before customizing. </li>
 
-1: Read through the comments and make the file farmiliar before customizing. 
+<li>2: Rename add_menu_page()'s Page Title, Menu Title, Slug Name and function name to your prefrence. Note: slug_name is used in several places. page_content_func is the page's html output function.</li>
 
-2: Rename add_menu_page()'s Page Title, Menu Title, Slug Name and function name to your prefrence. Note: slug_name is used in several places. page_content_func is the page's html output function.
+<li>3: Rename register_setting()'s options group (used in within settings_fields()), the options name (used in settings_fields() & any get_option('my-setting') in the future), and finally the optional yet "c'mon guy's" sanitization callback (these are used throughout the file and saved to your WP DB!)</li>
 
-3: Rename register_setting()'s options group (used in within settings_fields()), the options name (used in settings_fields() & any get_option('my-setting') in the future), and finally the optional yet "c'mon guy's" sanitization callback (these are used throughout the file and saved to your WP DB!)
+<li>4: include('admin_page.php');</li>
+</ol>
 
-4: include('admin_page.php');
-
-
-Function Notes:
+<h3>Function Notes:</h3>
 
 add_action('admin_menu', 'shnazy_options');
 
