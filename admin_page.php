@@ -12,9 +12,9 @@ function shnazy_options() {
 
 	// Hide duplicate submenu item
 	add_submenu_page(
-		'slug_name',   		   // parent slug, same as main menu slug
-		'',           		   // empty page title
-		'',        			   // empty menu title
+		'slug_name',   	       // parent slug, same as main menu slug
+		'',           	       // empty page title
+		'',        	       // empty menu title
 		'manage_options',      // same capability as parent
 		'slug_name',           // same menu slug as parent slug
 		'page_content_func'    // same function as parent
@@ -26,22 +26,22 @@ function shnazy_options() {
 
 
 	register_setting( 
-    	'my-settings-group', // option group - for security 'clearance' nonces etc in settings_fields()
-    	'my-setting', 		 // option name - exists in the DB 
-    	'sanitize_callback'	 // sanitization callback function...
-    );
+    		'my-settings-group', 	 // option group - for security 'clearance' nonces etc in settings_fields()
+    		'my-setting', 		 // option name - exists in the DB 
+    		'sanitize_callback'	 // sanitization callback function...
+    	);
     	// add_settings_section( $id, $title, $callback, $page ):
 	    add_settings_section( 
 	    	'section-one', 		     // section ID
-	    	'Section One', 			 // section title
-	    	'section_one_callback',  // usually renders some help text
-	    	'slug_name' 			 // the menu slug we used in our add_menu_page()
+	    	'Section One', 		     // section title
+	    	'section_one_callback',      // usually renders some help text
+	    	'slug_name' 		     // the menu slug we used in our add_menu_page()
 	    );	
 	    	
 		    add_settings_field( 
 		    	'field-one', 			// $id
 		    	'Field One', 			// $title echoed
-		    	'field_one_callback', 	// $callback for html
+		    	'field_one_callback', 		// $callback for html
 		    	'slug_name', 			// $page
 		    	'section-one' 			// $section (optional)
 		    );
@@ -49,7 +49,7 @@ function shnazy_options() {
 		    add_settings_field(
 		    	'field-two', 			// $id
 		    	'Field Two', 			// $title echoed
-		    	'field_two_callback', 	// $callback for html
+		    	'field_two_callback', 		// $callback for html
 		    	'slug_name', 			// $page
 		    	'section-one' 			// $section (optional)
 		    );
@@ -57,7 +57,7 @@ function shnazy_options() {
 		    add_settings_field(
 		    	'field-three', 			// $id
 		    	'Field Three', 			// $title echoed
-		    	'field_three_callback', // $callback for html
+		    	'field_three_callback', 	// $callback for html
 		    	'slug_name', 			// $page
 		    	'section-one' 			// $section (optional)
 		    );
